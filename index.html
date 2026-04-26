@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼了个豆 - 官方网站</title>
+    <style>
+        :root {
+            --primary: #7986CB;
+            --accent: #FF8DA1;
+            --success: #81D4A9;
+            --bg: #f8f9ff;
+            --text: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 主体内容 */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 10% 60px;
+            background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+        }
+
+        .badge {
+            background: rgba(121, 134, 203, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-title {
+            font-size: 1.5rem;
+            color: #666;
+            margin: 20px 0 40px;
+        }
+
+        /* 状态展示 */
+        .status-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .platform-card {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .status-tag {
+            background: var(--success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        /* 像素豆效果装饰 */
+        .bead-decoration {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        /* 手机端适配 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding: 60px 5%; }
+            .platform-card { width: 140px; padding: 20px; }
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(121,134,203,0.3);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 15px 30px rgba(121,134,203,0.5);
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <span>🎨</span> 拼了个豆
+        </div>
+        <div class="nav-links">
+            <span style="color: #999; font-size: 14px;">Version 1.0.2-beta</span>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="badge">新品首秀 · 邀请测试</div>
+        <h1>拼了个豆</h1>
+        <div class="sub-title">超好玩的拼豆小游戏</div>
+        
+        <p style="max-width: 600px; color: #777; margin-bottom: 40px;">
+            这是一款极简治愈的像素拼豆创作软件。我们正在将纯粹的指尖乐趣，从指尖带到屏幕，随时随地开启你的像素艺术之旅。
+        </p>
+
+        <a href="#test" class="cta-button">立即申请加入内测</a>
+
+        <div class="status-container" id="test">
+            <div class="platform-card">
+                <span class="icon">🤖</span>
+                <strong>Android 版</strong>
+                <span class="status-tag">内测中</span>
+            </div>
+            <div class="platform-card">
+                <span class="icon">🍎</span>
+                <strong>iOS 版</strong>
+                <span class="status-tag">内测中</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景点缀 -->
+    <div class="bead-decoration" style="top: 20%; left: 10%; background: var(--primary);"></div>
+    <div class="bead-decoration" style="top: 15%; right: 15%; background: var(--accent);"></div>
+    <div class="bead-decoration" style="bottom: 30%; left: 15%; background: var(--success);"></div>
+    <div class="bead-decoration" style="top: 50%; right: 10%; background: #F9C773;"></div>
+
+    <footer>
+        &copy; 2023 拼了个豆 工作室. All Rights Reserved.<br>
+        让每一次拼凑都充满温暖与创意
+    </footer>
+
+</body>
+</html>
