@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>拼了个豆 - 官方网站</title>
+    <title>拼了个豆 - 拼豆游戏</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <style>
         :root {
             --primary: #7986CB;
@@ -35,7 +36,7 @@
         }
 
         .nav-logo {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             color: var(--primary);
             display: flex;
@@ -89,14 +90,15 @@
 
         .platform-card {
             background: white;
-            padding: 30px 40px;
+            padding: 30px 50px;
             border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 200px;
+            min-width: 240px;
             transition: transform 0.3s ease;
+            border: 2px solid rgba(121, 134, 203, 0.05);
         }
 
         .platform-card:hover {
@@ -104,24 +106,25 @@
         }
 
         .icon {
-            font-size: 40px;
+            font-size: 48px;
             margin-bottom: 15px;
         }
 
         .status-tag {
             background: var(--success);
             color: white;
-            padding: 4px 12px;
+            padding: 6px 16px;
             border-radius: 8px;
-            font-size: 12px;
-            margin-top: 10px;
+            font-size: 14px;
+            margin-top: 15px;
             animation: pulse 2s infinite;
+            font-weight: 500;
         }
 
         @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         /* 像素豆效果装饰 */
@@ -138,7 +141,7 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .hero { padding: 60px 5%; }
-            .platform-card { width: 140px; padding: 20px; }
+            .platform-card { min-width: 200px; padding: 25px; }
         }
 
         footer {
@@ -170,36 +173,33 @@
 
     <nav>
         <div class="nav-logo">
-            <span>🎨</span> 拼了个豆
+            <img src="logo.png" alt="logo" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover;">
+            <span>拼了个豆</span>
         </div>
+
         <div class="nav-links">
-            <span style="color: #999; font-size: 14px;">Version 1.0.2-beta</span>
+            <span style="color: #999; font-size: 14px;">Beta 0.0.1</span>
         </div>
     </nav>
 
     <div class="hero">
-        <div class="badge">新品首秀 · 邀请测试</div>
+        <div class="badge">开发者内测 · 诚邀共建</div>
         <h1>拼了个豆</h1>
-        <div class="sub-title">超好玩的拼豆小游戏</div>
+        <div class="sub-title">超好玩的拼豆像素小游戏</div>
         
         <p style="max-width: 600px; color: #777; margin-bottom: 40px;">
-            这是一款极简治愈的像素拼豆创作软件。我们正在将纯粹的指尖乐趣，从指尖带到屏幕，随时随地开启你的像素艺术之旅。
+            这是一款极简治愈的像素拼豆游戏。目前我们正在进行<b>微信小程序端</b>的深度内测，欢迎申请加入内测。
         </p>
 
-        <a href="#test" class="cta-button">立即申请加入内测</a>
+        <a href="https://qm.qq.com/q/xBCK3aRxle" class="cta-button">立即申请内测资格</a>
 
-        <div class="status-container" id="test">
+        <!-- <div class="status-container">
             <div class="platform-card">
-                <span class="icon">🤖</span>
-                <strong>Android 版</strong>
+                <span class="icon">💬</span>
+                <strong>微信小程序版</strong>
                 <span class="status-tag">内测中</span>
             </div>
-            <div class="platform-card">
-                <span class="icon">🍎</span>
-                <strong>iOS 版</strong>
-                <span class="status-tag">内测中</span>
-            </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- 背景点缀 -->
@@ -209,8 +209,7 @@
     <div class="bead-decoration" style="top: 50%; right: 10%; background: #F9C773;"></div>
 
     <footer>
-        &copy; 2023 拼了个豆 工作室. All Rights Reserved.<br>
-        让每一次拼凑都充满温暖与创意
+        &copy; 2026 拼了个豆. All Rights Reserved.
     </footer>
 
 </body>
